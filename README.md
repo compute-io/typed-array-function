@@ -72,7 +72,7 @@ arrayfun( add5, out, arr, {
 ===
 ### Factory
 
-The main exported `function` does __not__ make any assumptions regarding the number of input [`arrays`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array). To create a reusable [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) function where the number of input [`arrays`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) is known, a factory method is provided.
+The main exported `function` does __not__ make any assumptions regarding the number of input [`typed arrays`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays). To create a reusable [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) function where the number of input [`typed arrays`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) is known, a factory method is provided.
 
 
 <a name="arrayfun-factory"></a>
@@ -139,13 +139,13 @@ To facilitate using [`typed array`](https://developer.mozilla.org/en-US/docs/Web
 
 #### arrayfun.create( [fcn,] num )
 
-Creates an apply `function` to apply a `function` to each [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) element, where `num` is the number of input [`arrays`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) __including__ the output [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays).
+Creates an apply `function` to apply a `function` to each [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) element, where `num` is the number of input [`typed arrays`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) __including__ the output [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays).
 
 ``` javascript
 var afcn = arrayfun.create( 3 ),
 	out = new Array( 5 );
 
-var out = afcn( add, out, arr1, arr2 );
+out = afcn( add, out, arr1, arr2 );
 // returns [ 10, 11, 12, 13, 14 ]
 
 function subtract( x, y ) {
