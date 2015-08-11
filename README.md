@@ -58,7 +58,7 @@ var out = Uint8Array( 5 );
 arrayfun( add5, out, arr, {
 	'out': 'true';
 });
-// returns Uint8Array( [5,5,5,5,5] )
+// returns Uint8Array( [6,7,8,9,10] )
 
 // Works with generic arrays, as well...
 out = [ 0, 0, 0, 0, 0 ];
@@ -66,7 +66,7 @@ out = [ 0, 0, 0, 0, 0 ];
 arrayfun( add5, out, arr, {
 	'out': 'true';
 });
-// returns [ 5, 5, 5, 5, 5 ]
+// returns [ 6, 7, 8, 9, 10 ]
 ```
 
 ===
