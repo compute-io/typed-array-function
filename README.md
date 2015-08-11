@@ -170,7 +170,7 @@ var out = aadd( out, arr1, arr2 );
 ===
 ### Raw
 
-Lower-level APIs are provided which forgo some of the guarantees of the above APIs, such as input argument validation. While use of the above APIs are encouraged in REPL environments, use of the lower-level interfaces may be warranted when arguments are of a known type or when performance is paramount.
+Lower-level APIs are provided which forgo some of the guarantees of the above APIs, such as input argument validation. While use of the above APIs is encouraged in REPL environments, use of the lower-level interfaces may be warranted when arguments are of a known type or when performance is paramount.
 
 #### arrayfun.raw( fcn, ...array[, options] )
 
@@ -203,7 +203,7 @@ The function accepts the same `options` as [`arrayfun.factory()`](#arrayfun-fact
 
 ## Notes
 
-*	Both factory methods, as well as the `.create()` method, use dynamic code evaluation. Beware when using these methods in the browser as they may violate your [content security policy](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) (CSP). 
+*	Both factory methods, as well as the `.create()` method, use dynamic code evaluation. Beware when using these methods in the browser as they may violate your [content security policy](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) (CSP).
 
 
 
