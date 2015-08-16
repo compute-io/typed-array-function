@@ -91,8 +91,8 @@ describe( 'create apply', function tests() {
 			new Int8Array( [1,2,3,4,5] )
 		];
 
-		apply1 = create( 2 );
-		apply2 = create( noop, 2 );
+		apply1 = create( 1 );
+		apply2 = create( noop, 1 );
 
 		for ( var i = 0; i < values.length; i++ ) {
 			expect( badValue1( values[i] ) ).to.throw( Error );
@@ -121,7 +121,7 @@ describe( 'create apply', function tests() {
 		// General apply...
 		out = new Array( arr.length );
 
-		apply = create( 2 );
+		apply = create( 1 );
 		actual = apply( add1, out, arr );
 
 		assert.strictEqual( actual, out );
@@ -129,7 +129,7 @@ describe( 'create apply', function tests() {
 
 		// Apply a particular function...
 		out = new Array( arr.length );
-		apply = create( add1, 2 );
+		apply = create( add1, 1 );
 
 		actual = apply( out, arr );
 		assert.deepEqual( out, [2,2,2,2] );
@@ -147,7 +147,7 @@ describe( 'create apply', function tests() {
 
 		// General apply...
 		out = new Array( arr1.length );
-		apply = create( 3 );
+		apply = create( 2 );
 
 		actual = apply( add, out, arr1, arr2 );
 		assert.strictEqual( actual, out );
@@ -155,7 +155,7 @@ describe( 'create apply', function tests() {
 
 		// Apply a particular function...
 		out = new Array( arr1.length );
-		apply = create( add, 3 );
+		apply = create( add, 2 );
 
 		actual = apply( out, arr1, arr2 );
 		assert.strictEqual( actual, out );

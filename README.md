@@ -139,10 +139,10 @@ To facilitate using [`typed array`](https://developer.mozilla.org/en-US/docs/Web
 
 #### arrayfun.create( [fcn,] num )
 
-Creates an apply `function` to apply a `function` to each [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) element, where `num` is the number of input [`typed arrays`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) __including__ the output [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays).
+Creates an apply `function` to apply a `function` to each [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) element, where `num` is the number of input [`typed arrays`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) __excluding__ the output [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays).
 
 ``` javascript
-var afcn = arrayfun.create( 3 ),
+var afcn = arrayfun.create( 2 ),
 	out = new Array( 5 );
 
 out = afcn( add, out, arr1, arr2 );
@@ -159,7 +159,7 @@ out = afcn( subtract, out, arr1, arr2 );
 An apply `function` may be provided during `function` creation.
 
 ``` javascript
-var aadd = arrayfun.create( add, 3 );
+var aadd = arrayfun.create( add, 2 );
 
 var out = aadd( out, arr1, arr2 );
 // returns [ 10, 11, 12, 13, 14 ]
