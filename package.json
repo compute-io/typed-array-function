@@ -1,6 +1,6 @@
 {
   "name": "compute-typed-array-function",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Applies a function to each typed array element.",
   "author": {
     "name": "Athan Reines",
