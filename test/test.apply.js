@@ -113,10 +113,38 @@ describe( 'apply', function tests() {
 
 	it( 'should throw an error if not provided input arrays', function test() {
 		expect( foo ).to.throw( Error );
+		expect( bar ).to.throw( Error );
 		function foo() {
-			apply( noop, {
+			apply( noop );
+		}
+		function bar() {
+			apply( noop, [], {
 				'out': true
 			});
+		}
+	});
+
+	it( 'should throw an error if provided an output argument which is not an array or typed array', function test() {
+		var values = [
+			'5',
+			5,
+			NaN,
+			true,
+			null,
+			undefined,
+			{},
+			function(){}
+		];
+
+		for ( var i = 0; i < values.length; i++ ) {
+			expect( badValue( values[i] ) ).to.throw( TypeError );
+		}
+		function badValue( value ) {
+			return function() {
+				apply( noop, value, [1,2,3], {
+					'out': true
+				});
+			};
 		}
 	});
 
